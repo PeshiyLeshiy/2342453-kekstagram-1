@@ -8,6 +8,10 @@ const cancelButton = document.querySelector('#upload-cancel');
 const fileField = document.querySelector('#upload-file');
 const hashtagField = document.querySelector('.text__hashtags');
 const commentField = document.querySelector('.text__description');
+const FILE_TYPES = ['gif', 'jpg', 'jpeg', 'png'];
+const fileChooser = document.querySelector('.img-upload__start input[type=file]');
+const photoPreview = document.querySelector('.img-upload__preview img');
+const effectsPreviews = document.querySelectorAll('.effects__preview');
 
 const MAX_HASHTAG_COUNT = 5;
 const MIN_HASHTAG_LENGTH = 2;
