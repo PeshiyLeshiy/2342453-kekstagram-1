@@ -1,3 +1,5 @@
+import { isEscapeKey } from './util.js';
+
 const bigPicture = document.querySelector('.big-picture');
 const body = document.querySelector('body');
 const cancelButton = document.querySelector('#picture-cancel');

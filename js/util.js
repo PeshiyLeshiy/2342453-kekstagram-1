@@ -6,6 +6,8 @@ const getRandomInteger = (a, b) => {
   return Math.floor(result);
 };
 
+const checkStringLength = (string, length) => string.length <= length; // проверка на длину строки
+
 /* Функция для генерации id*/
 const getRandomArrayElement = (array) =>
   array[getRandomInteger(0, array.length - 1)];
@@ -20,5 +22,22 @@ const createIdGenerator = () => {
   };
 };
 
+const isEscapeKey = (evt) => evt.key === 'Escape';
 
-export {getRandomInteger, getRandomArrayElement, createIdGenerator};
+function debounce (callback, timeoutDelay = 500) {
+  let timeoutId;
+
+  return (...rest) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => callback.apply(this, rest), timeoutDelay);
+  };
+}
+
+
+export {
+  getRandomInteger,
+  isEscapeKey,
+  checkStringLength,
+  getRandomArrayElement,
+  createIdGenerator,
+  debounce};
